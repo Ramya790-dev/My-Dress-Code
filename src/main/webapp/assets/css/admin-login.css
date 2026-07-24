@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+
+    background:#f5f6fa;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+}
+
+.login-card{
+
+    width:900px;
+
+    display:flex;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.1);
+
+}
+
+.login-left{
+
+    width:40%;
+
+    background:#111827;
+
+    color:white;
+
+    padding:50px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    width:180px;
+
+    margin-bottom:30px;
+
+}
+
+.login-left h1{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.login-left p{
+
+    line-height:28px;
+
+}
+
+.login-right{
+
+    width:60%;
+
+    padding:60px;
+
+}
+
+.login-right h2{
+
+    font-size:35px;
+
+    margin-bottom:30px;
+
+}
+
+.login-right input{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+}
+
+.login-right button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+.login-right button:hover{
+
+    background:#C8A97E;
+
+    color:#111827;
+
+}
+
+.error{
+
+    background:#fee2e2;
+
+    color:#dc2626;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    margin-bottom:20px;
+
+}

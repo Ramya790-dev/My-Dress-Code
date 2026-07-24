@@ -1,0 +1,163 @@
+/* --- WISHLIST LAYOUT CONTAINER --- */
+.wishlist-container {
+    max-width: 1200px;           /* Restricts layout width on large monitors */
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    /* FIX: auto-fill keeps items at their intended size instead of stretching them */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- WISHLIST ITEM CARD --- */
+.wishlist-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;   /* Soft border to define the card edge */
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures buttons align evenly at the bottom */
+}
+
+.wishlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- CARD MEDIA ELEMENT --- */
+.wishlist-image {
+    width: 100%;
+    height: 240px;               /* Fixed boundary prevents vertical layout bloat */
+    object-fit: contain;         /* Fits product completely without dynamic cropping */
+    background-color: #f9fafb;   /* Clean studio backdrop for products */
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* --- CARD TYPOGRAPHY --- */
+.wishlist-card h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111827;
+    margin: 10px 0 5px 0;
+    /* Safely truncates long product names with an ellipsis (...) instead of breaking lines */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wishlist-price {
+    color: #C8A97E;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+}
+
+/* --- BUTTON GRID LAYOUT MANAGEMENT --- */
+.wishlist-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: auto;            /* Pushes buttons down if titles vary in length */
+}
+
+.wishlist-secondary-actions {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+/* --- BUTTON ACTION CONTROLS --- */
+.add-cart-btn {
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.add-cart-btn:hover {
+    background: #374151;
+}
+
+.details-btn, .remove-wishlist-btn {
+    flex: 1;                     /* Splits horizontal space evenly 50/50 */
+    padding: 12px 5px; 
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.details-btn {
+    background: #ffffff;
+    color: #111827;
+    border: 2px solid #111827;
+}
+
+.details-btn:hover {
+    background: #111827;
+    color: #ffffff;
+}
+
+.remove-wishlist-btn {
+    background: #dc2626;
+    color: white;
+    border: 2px solid #dc2626;  /* Matches height thickness with Details button */
+}
+
+.remove-wishlist-btn:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* --- EMPTY VIEWPORT FALLBACK --- */
+.empty-wishlist {
+    text-align: center;
+    padding: 80px 20px;
+    grid-column: 1 / -1;         /* Makes the empty container span full width */
+}
+
+.empty-wishlist h2 {
+    color: #111827;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.empty-wishlist p {
+    color: #6b7280;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+.browse-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.browse-btn:hover {
+    background: #374151;
+}
+
+.empty-icon {
+    font-size: 70px;
+    color: #e11d48;
+    margin-bottom: 15px;
+}
